@@ -1,3 +1,5 @@
+server:
+  port: 8012
 
 eureka:
   client:
@@ -15,5 +17,3 @@ spring:
     mode: HTML5
   zipkin:
       base-url: http://localhost:9411
-server:
-  port: 8012
