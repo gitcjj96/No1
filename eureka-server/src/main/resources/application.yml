@@ -7,7 +7,7 @@ spring:
 
 eureka:
   instance:
-    hostname: www.haskie.com
+    hostname: www.haskie.cn
   client:
     registerWithEureka: false
     fetchRegistry: false
