@@ -5,6 +5,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.cjj.springcloud.test.entity.Product;
 import com.cjj.springcloud.test.service.IProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
@@ -19,6 +20,8 @@ import java.util.List;
 @RestController
 public class ProductController {
     @Autowired IProductService productService;
+    @Value("${version}")
+    String version;
 
     @GetMapping("/products")
     public ModelAndView products(
@@ -26,6 +29,7 @@ public class ProductController {
     ) {
         List<Product> ps = productService.listProducts();
         mav.addObject("ps", ps);
+        mav.addObject("version", version);
         mav.setViewName("products");
         return mav;
     }

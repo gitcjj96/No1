@@ -1,10 +1,6 @@
 server:
   port: 8012
 
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
 spring:
   application:
     name: product-view-service-feign
@@ -16,4 +12,4 @@ spring:
     content-type: text/html
     mode: HTML5
   zipkin:
-      base-url: http://localhost:9411
+      base-url: http:///www.haskie.cn:9411

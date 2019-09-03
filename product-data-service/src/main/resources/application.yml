@@ -4,7 +4,7 @@ spring:
   application:
     name: product-data-service
   zipkin:
-    base-url: http://localhost:9411
+    base-url: http:///www.haskie.cn:9411
 eureka:
   client:
     serviceUrl:
