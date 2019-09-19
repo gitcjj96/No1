@@ -22,6 +22,10 @@ public class ProductController {
     @Autowired IProductService productService;
     @Value("${version}")
     String version;
+    @Value("${name}")
+    String name;
+
+
 
     @GetMapping("/products")
     public ModelAndView products(
@@ -30,6 +34,7 @@ public class ProductController {
         List<Product> ps = productService.listProducts();
         mav.addObject("ps", ps);
         mav.addObject("version", version);
+        mav.addObject("name", name);
         mav.setViewName("products");
         return mav;
     }

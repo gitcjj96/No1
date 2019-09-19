@@ -25,7 +25,6 @@
             <th>id</th>
             <th>产品名称</th>
             <th>价格</th>
-            <th>版本号</th>
         </tr>
         </thead>
         <tbody>
@@ -33,7 +32,14 @@
             <td th:text="${p.id}"></td>
             <td th:text="${p.name}"></td>
             <td th:text="${p.price}"></td>
-            <td th:text="${version}"></td>
+        </tr>
+        <tr>
+            <td align="center" colspan="2">
+                <p th:text="${version}" >how2j springcloud version unknown</p>
+            </td>
+            <td align="center">
+                <p th:text="${name}" >杜洛寒</p>
+            </td>
         </tr>
         </tbody>
     </table>
